@@ -8,4 +8,5 @@ class User < ActiveRecord::Base
     validates :age, numericality: { only_integer: true, greater_than: 0 }, on: :update
     
     has_secure_password
+    has_many :microposts
 end
